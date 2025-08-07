@@ -50,7 +50,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-white" href="tramites.html">
+    <a class="nav-link text-white" href="Tramites.html">
       <i class="fas fa-file-alt me-1"></i>Trámites
     </a>
   </li>
@@ -104,7 +104,7 @@
 
   <!-- Footer -->
   <footer style="background-color: #3313ff;" class="text-white text-center py-4">
-  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: (063) 423493</p>
+  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: 936 267 929</p>
 </footer>
  
   
@@ -344,49 +344,59 @@
       talleres: `
         <h2>Talleres Extra-curriculares</h2>
         <ul>
-          <li><strong>Música:</strong> Coro, instrumentos de viento, cuerdas, ensambles.</li>
-          <li><strong>Teatro:</strong> Obras completas, producción, escenografía y expresión oral.</li>
-          <li><strong>Danza:</strong> Marinera, huayno, danza moderna, hip hop, danza libre.</li>
-          <li><strong>Deporte:</strong> Torneos de fútbol, vóley, atletismo y ajedrez escolar.</li>
+          <li><button class="btn btn-toggle" data-target="danza"><img src="img/danza.png" alt="Danza" width="20" class="me-2"> Danza</button></li>
+          <li><button class="btn btn-toggle" data-target="futbol"><i class="fas fa-futbol me-2"></i> Fútbol</button></li>
+          <li><button class="btn btn-toggle" data-target="voley"><i class="fas fa-volleyball-ball me-2"></i> Vóley</button></li>
+          <li><button class="btn btn-toggle" data-target="basquet"><i class="fas fa-basketball-ball me-2"></i> Básquetbol</button></li>
+          <li><button class="btn btn-toggle" data-target="ajedrez"><i class="fas fa-chess me-2"></i> Ajedrez</button></li>
         </ul>
+        
         <p style="font-size: 18px; font-family: 'Arial', sans-serif; color: #333; text-align: center; line-height: 1.6;">
-    En nuestra institución, ofrecemos una amplia variedad de talleres diseñados para fomentar la creatividad, el trabajo en equipo y el desarrollo integral de nuestros estudiantes. ¡Aquí, cada alumno tiene la oportunidad de descubrir nuevas pasiones y desarrollar habilidades únicas!
-</p>
+            En nuestra institución, ofrecemos una amplia variedad de talleres diseñados para fomentar la creatividad, el trabajo en equipo y el desarrollo integral de nuestros estudiantes. ¡Aquí, cada alumno tiene la oportunidad de descubrir nuevas pasiones y desarrollar habilidades únicas!
+        </p>
 
-<div class="row g-4 mb-4">
-    <!-- Imagen 1 - Música -->
-    <div class="col-md-4">
-        <div class="card card-hover">
-            <img src="img/taller_musica.jpg" class="d-block w-100" alt="Taller de Música">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Música</h5>
-                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Explora el arte de la música con Coro, Instrumentos de viento y cuerdas. ¡Una sinfonía de talentos que se une en cada ensayo y presentación!</p>
+        <div class="row g-4 mb-4">
+            <!-- Imagen - Danza -->
+            <div class="col-md-4">
+                <div class="card card-hover">
+                    <img src="img/danza1.jpg" class="d-block w-100" alt="Taller de Danza">
+                    <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                        <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Danza</h5>
+                        <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">
+                            La danza es expresión pura. Desde la Marinera hasta el Hip Hop, nuestros estudiantes se sumergen en un mundo de movimiento y arte.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Imagen 2 - Teatro -->
-    <div class="col-md-4">
-        <div class="card card-hover">
-            <img src="img/taller_teatro.jpg" class="d-block w-100" alt="Taller de Teatro">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Teatro</h5>
-                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desde la producción hasta la escenografía, el teatro cobra vida en nuestra escuela. ¡Cada obra refleja la pasión de nuestros jóvenes actores!</p>
-            </div>
-        </div>
-    </div>
 
-    <!-- Imagen 3 - Danza -->
-    <div class="col-md-4">
-        <div class="card card-hover">
-            <img src="img/taller_danza.jpg" class="d-block w-100" alt="Taller de Danza">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Danza</h5>
-                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">La danza es expresión pura. Desde la Marinera hasta el Hip Hop, nuestros estudiantes se sumergen en un mundo de movimiento y arte.</p>
+            <!-- Imagen - Fútbol -->
+            <div class="col-md-4">
+                <div class="card card-hover">
+                    <img src="img/futbol1.jpg" class="d-block w-100" alt="Taller de Fútbol">
+                    <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                        <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Fútbol</h5>
+                        <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">
+                            Participa en torneos escolares, desarrolla habilidades tácticas y vive la pasión por el fútbol con tus compañeros.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen - Vóley -->
+            <div class="col-md-4">
+                <div class="card card-hover">
+                    <img src="img/voley1.jpg" class="d-block w-100" alt="Taller de Vóley">
+                    <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                        <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Vóley</h5>
+                        <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">
+                            Mejora tu coordinación, refuerza el trabajo en equipo y disfruta de emocionantes partidos de vóley.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>`
+`
+
     };
 
     botones.forEach(b => {

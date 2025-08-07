@@ -51,7 +51,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-white" href="tramites.html">
+    <a class="nav-link text-white" href="Tramites.html">
       <i class="fas fa-file-alt me-1"></i>Trámites
     </a>
   </li>
@@ -84,12 +84,13 @@
     <nav class="sidebar p-4">
       <ul class="nav flex-column">
         <li><button class="btn btn-toggle" data-target="musica"><i class="bi bi-music-note-list me-2"></i> Música</button></li>
-<li><button class="btn btn-toggle" data-target="canto"><i class="bi bi-mic me-2"></i> Canto</button></li>
-<li><button class="btn btn-toggle" data-target="robotica"><i class="bi bi-gear me-2"></i> Robótica</button></li>
-<li><button class="btn btn-toggle" data-target="teatro"><i class="bi bi-person-square me-2"></i> Teatro</button></li>
-<li><button class="btn btn-toggle" data-target="danza"><i class="bi bi-boombox me-2"></i> Danza</button></li>
-<li><button class="btn btn-toggle" data-target="deportes"><i class="bi bi-trophy me-2"></i> Deportes</button></li>
-<li><button class="btn btn-toggle" data-target="pintura"><i class="bi bi-palette me-2"></i> Pintura</button></li>
+<li><button class="btn btn-toggle" data-target="danza"><img src="img/danza.png" alt="Danza" width="20" class="me-2"> Danza</button></li>
+
+<li><button class="btn btn-toggle" data-target="futbol"><i class="fas fa-futbol me-2"></i> Fútbol</button></li>
+<li><button class="btn btn-toggle" data-target="voley"><i class="fas fa-volleyball-ball me-2"></i> Vóley</button></li>
+<li><button class="btn btn-toggle" data-target="basquet"><i class="fas fa-basketball-ball me-2"></i> Básquetbol</button></li>
+<li><button class="btn btn-toggle" data-target="ajedrez"><i class="fas fa-chess me-2"></i> Ajedrez</button></li>
+
 
       </ul>
     </nav>
@@ -109,11 +110,12 @@
 
   <!-- Footer -->
   <footer style="background-color: #3313ff;" class="text-white text-center py-4">
-  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: (063) 423493</p>
+  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: 936 267 929</p>
 </footer>
  
   
- 
+ <!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Script dinámico -->
 <script>
   const botones = document.querySelectorAll(".btn-toggle");
@@ -121,103 +123,234 @@
 
   const info = {
     musica: `
-      <h2>Taller de Música</h2>
-      <p>Explora el arte de la música con Coro, instrumentos de viento, cuerdas y ensambles.</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_musica.jpg" class="d-block w-100" alt="Taller de Música">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Música</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Una sinfonía de talentos que se une en cada ensayo y presentación.</p>
+      <h2>🎶 Taller de Música</h2>
+      <p class="lead mb-4">
+        Explora el arte de la música con instrumentos, canto coral y ensambles. Este taller fortalece la sensibilidad auditiva, la coordinación motora y el trabajo grupal.
+        Aprenderás teoría musical básica, interpretación instrumental y expresión artística en escenarios.
+      </p>
+      <div id="carouselMusica" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/musica1.jpg" class="d-block w-100 carousel-img" alt="Música 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🎸 Clases de instrumentos</h5>
+              <p>Guitarra, teclado, flauta y más, guiado por docentes expertos.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/musica2.jpg" class="d-block w-100 carousel-img" alt="Música 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🎤 Coro y ensambles</h5>
+              <p>Participa en grupos vocales y montajes musicales en conjunto.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/musica3.jpg" class="d-block w-100 carousel-img" alt="Música 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🎉 Eventos musicales</h5>
+              <p>Presenta tu talento en festivales culturales y escolares.</p>
             </div>
           </div>
         </div>
-      </div>`,
-    canto: `
-      <h2>Taller de Canto</h2>
-      <p>Desarrolla tu voz, técnica vocal y expresión artística a través de diversas disciplinas del canto.</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_canto.jpg" class="d-block w-100" alt="Taller de Canto">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Canto</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Mejora tu técnica vocal mientras te diviertes explorando diferentes géneros musicales.</p>
-            </div>
-          </div>
-        </div>
-      </div>`,
-    robotica: `
-      <h2>Taller de Robótica</h2>
-      <p>Aprende a programar y construir robots con tecnología avanzada. ¡Crea, innova y resuelve desafíos!</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_robotica.jpg" class="d-block w-100" alt="Taller de Robótica">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Robótica</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desarrolla habilidades en programación y electrónica mientras construyes robots funcionales.</p>
-            </div>
-          </div>
-        </div>
-      </div>`,
-    teatro: `
-      <h2>Taller de Teatro</h2>
-      <p>Desde la producción hasta la escenografía, el teatro cobra vida con expresiones y actuaciones cautivadoras.</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_teatro.jpg" class="d-block w-100" alt="Taller de Teatro">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Teatro</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Transforma historias en actuaciones dramáticas y produce obras completas, desde la escenografía hasta el guion.</p>
-            </div>
-          </div>
-        </div>
-      </div>`,
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMusica" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMusica" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    `,
+
     danza: `
-      <h2>Taller de Danza</h2>
-      <p>Expresión corporal a través de la Marinera, Huayno, danza moderna, hip hop y más. ¡Baila y vive el arte!</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_danza.jpg" class="d-block w-100" alt="Taller de Danza">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Danza</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desde la Marinera hasta el Hip Hop, explora una variedad de estilos y lleva tu cuerpo a nuevas alturas.</p>
+      <h2>💃 Taller de Danza</h2>
+      <p class="lead mb-4">
+        Vive la experiencia de expresarte con el cuerpo. En este taller aprenderás danzas típicas peruanas y estilos contemporáneos.
+        Mejora tu postura, coordinación y ritmo, mientras te sumerges en la riqueza cultural y artística del movimiento.
+      </p>
+      <div id="carouselDanza" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/danza1.jpg" class="d-block w-100 carousel-img" alt="Danza 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🪈 Marinera y danzas típicas</h5>
+              <p>Revive nuestras raíces culturales con vestimenta y coreografías tradicionales.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/danza2.jpg" class="d-block w-100 carousel-img" alt="Danza 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🕺 Hip hop y urbano</h5>
+              <p>Conquista el escenario con movimientos modernos y actuales.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/danza3.jpg" class="d-block w-100 carousel-img" alt="Danza 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🎭 Competencias y shows</h5>
+              <p>Participa en presentaciones escolares, ferias y concursos de talento.</p>
             </div>
           </div>
         </div>
-      </div>`,
-    deportes: `
-      <h2>Taller de Deportes</h2>
-      <p>Participa en torneos de fútbol, vóley, atletismo, ajedrez escolar y más. ¡Desarrolla tus habilidades físicas y mentales!</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_deportes.jpg" class="d-block w-100" alt="Taller de Deportes">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Deportes</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Fútbol, vóley, atletismo... nuestros talleres de deportes te ayudarán a alcanzar tu máximo potencial físico.</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDanza" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDanza" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    `,
+
+    futbol: `
+      <h2>⚽ Taller de Fútbol</h2>
+      <p class="lead mb-4">
+        Desarrolla tu técnica individual y sentido táctico del fútbol. A través de entrenamientos dinámicos mejorarás tus capacidades físicas, tu espíritu de equipo y la disciplina deportiva.
+      </p>
+      <div id="carouselFutbol" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/futbol1.jpg" class="d-block w-100 carousel-img" alt="Fútbol 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>👟 Entrenamientos técnicos</h5>
+              <p>Control, dominio, precisión y pases bajo supervisión experta.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/futbol2.jpg" class="d-block w-100 carousel-img" alt="Fútbol 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🏆 Partidos internos</h5>
+              <p>Compite con tus compañeros en amistosos organizados semanalmente.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/futbol3.jpg" class="d-block w-100 carousel-img" alt="Fútbol 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🥇 Campeonatos intercolegiales</h5>
+              <p>Representa al colegio en torneos regionales.</p>
             </div>
           </div>
         </div>
-      </div>`,
-    pintura: `
-      <h2>Taller de Pintura</h2>
-      <p>Desarrolla tu creatividad a través del arte de la pintura, explorando diferentes técnicas y estilos.</p>
-      <div class="row g-4 mb-4">
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <img src="img/taller_pintura.jpg" class="d-block w-100" alt="Taller de Pintura">
-            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
-              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Pintura</h5>
-              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Explora el mundo del arte y aprende a plasmar tus ideas en lienzo. ¡Convierte tus emociones en color!</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFutbol" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselFutbol" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    `,
+
+    voley: `
+      <h2>🏐 Taller de Vóley</h2>
+      <p class="lead mb-4">
+        Aprende las técnicas del voleibol con sesiones dirigidas a mejorar tu recepción, remate y servicio. Fortalece tu cuerpo, mente y compañerismo deportivo.
+      </p>
+      <div id="carouselVoley" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/voley1.jpg" class="d-block w-100 carousel-img" alt="Vóley 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🧍 Recepción y saque</h5>
+              <p>Practica la técnica desde cero hasta juegos controlados.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/voley2.jpg" class="d-block w-100 carousel-img" alt="Vóley 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🤝 Trabajo en equipo</h5>
+              <p>Desarrolla estrategias y comunicación con tu grupo.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/voley3.jpg" class="d-block w-100 carousel-img" alt="Vóley 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🏐 Competencias escolares</h5>
+              <p>Vive la emoción de representar a tu institución.</p>
             </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVoley" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselVoley" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    `,
+
+    basquet: `
+      <h2>🏀 Taller de Básquetbol</h2>
+      <p class="lead mb-4">
+        Sumérgete en el mundo del básquet y potencia tu condición física. Aprende desde fundamentos hasta jugadas complejas en equipo. Mejora tu agilidad y concentración.
+      </p>
+      <div id="carouselBasquet" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/basquet1.jpg" class="d-block w-100 carousel-img" alt="Básquetbol 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>📏 Fundamentos del juego</h5>
+              <p>Dribbling, lanzamientos, defensa y rotaciones.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/basquet2.jpg" class="d-block w-100 carousel-img" alt="Básquetbol 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>💪 Trabajo físico</h5>
+              <p>Fortalece tu cuerpo con rutinas deportivas dinámicas.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/basquet3.jpg" class="d-block w-100 carousel-img" alt="Básquetbol 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>🤝 Partidos amistosos</h5>
+              <p>Aplica lo aprendido en juegos amistosos semanales.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBasquet" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBasquet" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    `,
+    ajedrez: `
+    <h2><i class="fas fa-chess me-2"></i> Taller de Ajedrez</h2>
+      <p class="lead mb-4">
+      
+      <p class="lead mb-4">Desarrolla tu pensamiento estratégico y habilidades mentales jugando ajedrez con compañeros y profesores.</p>
+      <div id="carouselAjedrez" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+          <div class="carousel-item active">
+            <img src="img/ajedrez1.jpg" class="d-block w-100 carousel-img" alt="Ajedrez 1">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>Iniciación al juego</h5>
+              <p>Aprende las reglas básicas, aperturas y movimientos esenciales.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/ajedrez2.jpg" class="d-block w-100 carousel-img" alt="Ajedrez 2">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>Estrategias avanzadas</h5>
+              <p>Desarrolla tu lógica mediante tácticas defensivas y ofensivas.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/ajedrez3.jpg" class="d-block w-100 carousel-img" alt="Ajedrez 3">
+            <div class="carousel-caption bg-dark bg-opacity-75 p-3 rounded">
+              <h5>Torneos internos</h5>
+              <p>Pon en práctica lo aprendido en partidas y campeonatos escolares.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAjedrez" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselAjedrez" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div>`
+  
+  
   };
 
   botones.forEach(b => {
@@ -225,9 +358,15 @@
       contenido.innerHTML = info[b.dataset.target];
       botones.forEach(x => x.classList.remove("active-btn"));
       b.classList.add("active-btn");
+
+      // Reinicializa los carruseles
+      const carousels = contenido.querySelectorAll(".carousel");
+      carousels.forEach(c => new bootstrap.Carousel(c));
     });
   });
 </script>
+
+
 
 
 </body>

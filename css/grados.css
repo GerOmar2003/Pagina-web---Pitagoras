@@ -60,3 +60,7 @@ footer { background: #004aad; color: white; text-align: center; padding: 20px; }
   padding: 2rem;
   border-radius: 10px;
 }
+.carousel-img {
+  height: 600px;
+  object-fit: contain;
+}
