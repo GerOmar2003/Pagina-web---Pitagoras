@@ -1,0 +1,62 @@
+/* Fuente y base */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+/* Tipografía base */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+body {
+  font-family: 'Baloo 2', cursive;
+  margin: 0;
+  background: #f5f8fa ;
+  
+}
+.hero {
+  background: url('../img/fondo-hero.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  color: white;
+}
+.sidebar {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 240px;
+}
+.btn-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px;
+  text-align: left;
+  width: 100%;
+  transition: background 0.3s;
+}
+.btn-toggle:hover {
+  background: rgba(255,255,255,0.2);
+}
+.active-btn {
+  background: rgba(255,255,255,0.3);
+}
+.hero-content { flex: 1; padding: 60px; }
+.seccion {
+  background: white; padding: 40px; margin: 40px auto;
+  max-width: 900px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.row .card-hover {
+  cursor: pointer;
+}
+.card-hover { background: white url('https://www.transparenttextures.com/patterns/canvas.png'); border-radius: 10px; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+footer { background: #004aad; color: white; text-align: center; padding: 20px; }
+
+/* Hero */
+.hero {
+  background: url('../img/4853758.jpg') center/cover no-repeat;
+  height: 190vh;
+  position: relative;
+}
+
+.overlay-hero {
+  background-color: rgba(255, 255, 255, 0.6); /* Más transparente */
+  color: #002b80;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 10px;
+}

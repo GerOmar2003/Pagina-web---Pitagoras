@@ -1,0 +1,98 @@
+/* Tipografía base */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+
+body {
+  font-family: 'Baloo 2', cursive;
+  background-color: #fff;
+  color: #002b80;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 6.5rem;
+}
+h2 {
+  font-size: 4.2rem;
+}
+h4 {
+  font-size: 1.9rem;
+}
+p {
+  font-size: 1.4rem;
+}
+
+/* Hero */
+.hero {
+  background: url('../img/4853758.jpg') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+}
+
+.overlay-hero {
+  background-color: rgba(255, 255, 255, 0.6); /* Más transparente */
+  color: #002b80;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+/* Menú */
+.menu-link {
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.menu-link:hover {
+  color: #ffcc00 !important;
+}
+
+/* Carrusel */
+.img-slide {
+  height: 450px;
+  position: relative;
+}
+
+.img-slide img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay-slide {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Tarjetas de pilares */
+.card {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Efecto de zoom al pasar el cursor */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Colores personalizados con transparencia al hacer hover */
+.card-hover-yellow:hover {
+  background-color: rgba(255, 221, 0, 0.3);
+}
+
+.card-hover-red:hover {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.card-hover-blue:hover {
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
+/* Footer */
+footer {
+  font-size: 0.95rem;
+}

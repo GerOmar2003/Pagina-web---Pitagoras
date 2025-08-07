@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Talleres – IEI Pitágoras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/grados.css">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body style="font-family: 'Baloo 2', cursive;">
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #3313ff;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+        <img src="img/logo.png" alt="Logo IEI Pitágoras" width="60" class="me-2" />
+        <strong style="font-size: 2rem;">I.E.I. "Pitágoras"</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link text-white" href="index.html">
+      <i class="fas fa-home me-1"></i>Inicio
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white active" href="autoridades.html">
+      <i class="fas fa-users me-1"></i>Autoridades
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="organizacion.html">
+      <i class="fas fa-sitemap me-1"></i>Organización
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="grados.html">
+      <i class="fas fa-layer-group me-1"></i>Grados
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="talleres.html">
+      <i class="fas fa-chalkboard-teacher me-1"></i>Talleres
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="tramites.html">
+      <i class="fas fa-file-alt me-1"></i>Trámites
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="https://pitagoras.cubicol.pe/principal/login" aria-label="Ir a Cubicol">
+      <i class="fas fa-cube me-1"></i>Cubicol
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="acerca.html">
+      <i class="fas fa-info-circle me-1"></i>Acerca de
+    </a>
+  </li>
+</ul>
+
+<head>
+  <style>
+    .nav-item .nav-link:hover {
+      color: #ffd500 !important;
+    }
+  </style>
+</head>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero con menú lateral -->
+  <div class="hero d-flex">
+    <!-- Menú lateral -->
+    <nav class="sidebar p-4">
+      <ul class="nav flex-column">
+        <li><button class="btn btn-toggle" data-target="musica"><i class="bi bi-music-note-list me-2"></i> Música</button></li>
+<li><button class="btn btn-toggle" data-target="canto"><i class="bi bi-mic me-2"></i> Canto</button></li>
+<li><button class="btn btn-toggle" data-target="robotica"><i class="bi bi-gear me-2"></i> Robótica</button></li>
+<li><button class="btn btn-toggle" data-target="teatro"><i class="bi bi-person-square me-2"></i> Teatro</button></li>
+<li><button class="btn btn-toggle" data-target="danza"><i class="bi bi-boombox me-2"></i> Danza</button></li>
+<li><button class="btn btn-toggle" data-target="deportes"><i class="bi bi-trophy me-2"></i> Deportes</button></li>
+<li><button class="btn btn-toggle" data-target="pintura"><i class="bi bi-palette me-2"></i> Pintura</button></li>
+
+      </ul>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <div class="container overlay-hero p-8 rounded" id="heroContent" style="background-color: rgba(255, 255, 255, 0.408);">
+  <div class="d-flex justify-content-center align-items-center text-center" style="min-height: 60vh;">
+    <div>
+      <h2 class="display-3 fw-bold">Nuestros Talleres Formativos</h2>
+<p class="lead">Fomentamos la creatividad y el desarrollo de habilidades desde el inicio con pasión y dedicación.</p>
+
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: #3313ff;" class="text-white text-center py-4">
+  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: (063) 423493</p>
+</footer>
+ 
+  
+ 
+  <!-- Script dinámico -->
+<script>
+  const botones = document.querySelectorAll(".btn-toggle");
+  const contenido = document.getElementById("heroContent");
+
+  const info = {
+    musica: `
+      <h2>Taller de Música</h2>
+      <p>Explora el arte de la música con Coro, instrumentos de viento, cuerdas y ensambles.</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_musica.jpg" class="d-block w-100" alt="Taller de Música">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Música</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Una sinfonía de talentos que se une en cada ensayo y presentación.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    canto: `
+      <h2>Taller de Canto</h2>
+      <p>Desarrolla tu voz, técnica vocal y expresión artística a través de diversas disciplinas del canto.</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_canto.jpg" class="d-block w-100" alt="Taller de Canto">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Canto</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Mejora tu técnica vocal mientras te diviertes explorando diferentes géneros musicales.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    robotica: `
+      <h2>Taller de Robótica</h2>
+      <p>Aprende a programar y construir robots con tecnología avanzada. ¡Crea, innova y resuelve desafíos!</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_robotica.jpg" class="d-block w-100" alt="Taller de Robótica">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Robótica</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desarrolla habilidades en programación y electrónica mientras construyes robots funcionales.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    teatro: `
+      <h2>Taller de Teatro</h2>
+      <p>Desde la producción hasta la escenografía, el teatro cobra vida con expresiones y actuaciones cautivadoras.</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_teatro.jpg" class="d-block w-100" alt="Taller de Teatro">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Teatro</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Transforma historias en actuaciones dramáticas y produce obras completas, desde la escenografía hasta el guion.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    danza: `
+      <h2>Taller de Danza</h2>
+      <p>Expresión corporal a través de la Marinera, Huayno, danza moderna, hip hop y más. ¡Baila y vive el arte!</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_danza.jpg" class="d-block w-100" alt="Taller de Danza">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Danza</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desde la Marinera hasta el Hip Hop, explora una variedad de estilos y lleva tu cuerpo a nuevas alturas.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    deportes: `
+      <h2>Taller de Deportes</h2>
+      <p>Participa en torneos de fútbol, vóley, atletismo, ajedrez escolar y más. ¡Desarrolla tus habilidades físicas y mentales!</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_deportes.jpg" class="d-block w-100" alt="Taller de Deportes">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Deportes</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Fútbol, vóley, atletismo... nuestros talleres de deportes te ayudarán a alcanzar tu máximo potencial físico.</p>
+            </div>
+          </div>
+        </div>
+      </div>`,
+    pintura: `
+      <h2>Taller de Pintura</h2>
+      <p>Desarrolla tu creatividad a través del arte de la pintura, explorando diferentes técnicas y estilos.</p>
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <div class="card card-hover">
+            <img src="img/taller_pintura.jpg" class="d-block w-100" alt="Taller de Pintura">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+              <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Pintura</h5>
+              <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Explora el mundo del arte y aprende a plasmar tus ideas en lienzo. ¡Convierte tus emociones en color!</p>
+            </div>
+          </div>
+        </div>
+      </div>`
+  };
+
+  botones.forEach(b => {
+    b.addEventListener("click", () => {
+      contenido.innerHTML = info[b.dataset.target];
+      botones.forEach(x => x.classList.remove("active-btn"));
+      b.classList.add("active-btn");
+    });
+  });
+</script>
+
+
+</body>
+</html>

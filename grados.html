@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Niveles Académicos – IEI Pitágoras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/grados.css">
+</head>
+<body style="font-family: 'Baloo 2', cursive;">
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top" style="background-color: #3313ff;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
+        <img src="img/logo.png" alt="Logo IEI Pitágoras" width="60" class="me-2" />
+        <strong style="font-size: 2rem;">I.E.I. "Pitágoras"</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link text-white" href="index.html">
+      <i class="fas fa-home me-1"></i>Inicio
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white active" href="autoridades.html">
+      <i class="fas fa-users me-1"></i>Autoridades
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="organizacion.html">
+      <i class="fas fa-sitemap me-1"></i>Organización
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="grados.html">
+      <i class="fas fa-layer-group me-1"></i>Grados
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="talleres.html">
+      <i class="fas fa-chalkboard-teacher me-1"></i>Talleres
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="tramites.html">
+      <i class="fas fa-file-alt me-1"></i>Trámites
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="https://pitagoras.cubicol.pe/principal/login" aria-label="Ir a Cubicol">
+      <i class="fas fa-cube me-1"></i>Cubicol
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-white" href="acerca.html">
+      <i class="fas fa-info-circle me-1"></i>Acerca de
+    </a>
+  </li>
+</ul>
+
+<head>
+  <style>
+    .nav-item .nav-link:hover {
+      color: #ffd500 !important;
+    }
+  </style>
+</head>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero con menú lateral -->
+  <div class="hero d-flex">
+    <!-- Menú lateral -->
+    <nav class="sidebar p-4">
+      <ul class="nav flex-column">
+        <li><button class="btn btn-toggle" data-target="inicial"><i class="bi bi-emoji-laughing me-2"></i> Inicial</button></li>
+        <li><button class="btn btn-toggle" data-target="primaria"><i class="bi bi-book me-2"></i> Primaria</button></li>
+        <li><button class="btn btn-toggle" data-target="secundaria"><i class="bi bi-mortarboard me-2"></i> Secundaria</button></li>
+        <li><button class="btn btn-toggle" data-target="concurso"><i class="bi bi-trophy me-2"></i> Concurso</button></li>
+        <li><button class="btn btn-toggle" data-target="talleres"><i class="bi bi-music-note-list me-2"></i> Talleres</button></li>
+      </ul>
+    </nav>
+
+    <!-- Contenido dinámico -->
+    <div class="container overlay-hero p-8 rounded" id="heroContent" style="background-color: rgba(255, 255, 255, 0.408);">
+  <div class="d-flex justify-content-center align-items-center text-center" style="min-height: 60vh;">
+    <div>
+      <h2 class="display-3 fw-bold">Nuestros Niveles Académicos</h2>
+      <p class="lead">Formamos líderes desde los primeros años con excelencia y valores.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer style="background-color: #3313ff;" class="text-white text-center py-4">
+  <p class="mb-0">&copy; 2025 I.E.I.P. "Pitágoras" – Av. Micaela Bastidas 305, Pasco | Tel: (063) 423493</p>
+</footer>
+ 
+  
+ 
+  <!-- Script dinámico -->
+  <script>
+    const botones = document.querySelectorAll(".btn-toggle");
+    const contenido = document.getElementById("heroContent");
+
+    const info = {
+      inicial: `
+        <h2>Nivel Inicial – Jardín</h2>
+        <p>Atendemos niños de 3, 4 y 5 años con desarrollo sensorial, motriz, lenguaje inicial y autonomía.</p>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card card-hover border-primary p-3 text-center shadow-sm">
+              <i class="bi bi-brush-fill fs-1 text-primary"></i>
+              <h5 class="mt-2">3 años</h5>
+              <p>Estimulación táctil, auditiva, juegos en equipo y psicomotricidad. Se promueve la socialización y la confianza.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-hover border-warning p-3 text-center shadow-sm">
+              <i class="bi bi-emoji-smile-fill fs-1 text-warning"></i>
+              <h5 class="mt-2">4 años</h5>
+              <p>Lenguaje oral, trazos, coordinación fina y rutinas escolares. Se refuerzan valores, canciones y cuentos.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-hover border-danger p-3 text-center shadow-sm">
+              <i class="bi bi-book-fill fs-1 text-danger"></i>
+              <h5 class="mt-2">5 años</h5>
+              <p>Lectoescritura inicial, conteo, lógica básica, psicomotricidad avanzada y preparación para primaria.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Secuencia de imágenes con descripciones -->
+<div class="text-center mt-5">
+    <h3 style="font-family: 'Baloo 2', cursive; color: #002762; font-weight: bold;">Momentos que nos definen</h3>
+    <p style="font-size: 18px; font-family: 'Baloo 2', sans-serif; color: #333; line-height: 1.6;">
+        Aquí compartimos algunos de los momentos más especiales que nuestros pequeños viven día a día en su proceso de aprendizaje. ¡Descubre la magia de su crecimiento!
+    </p>
+    <div class="row g-4">
+        <!-- Imagen 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/jardin1.jpg" class="card-img-top" alt="Niños jugando en el jardín">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive ; color: #002762;">Juegos y aprendizaje</h5>
+                    <p style="font-size: 16px;">El juego es la base del aprendizaje. Nuestros niños exploran su entorno y desarrollan habilidades esenciales mientras se divierten y socializan.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/jardin2.jpg" class="card-img-top" alt="Niños trabajando en equipo">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Trabajo en equipo</h5>
+                    <p style="font-size: 16px;">Fomentamos la colaboración y el trabajo en equipo. A través de actividades grupales, nuestros estudiantes aprenden a compartir, respetar y ayudar a los demás.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/jardin3.jpg" class="card-img-top" alt="Niños explorando con materiales didácticos">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Descubriendo el mundo</h5>
+                    <p style="font-size: 16px;">Cada día es una nueva oportunidad para explorar, descubrir y aprender. Nuestros niños desarrollan su curiosidad y creatividad mediante materiales didácticos y actividades interactivas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+      primaria: `
+        <h2>Nivel Primario (1° a 6° grado)</h2>
+        <p>Organizados en secciones: Fortaleza, Disciplina, Solidaridad, Valentía y Perseverancia.</p>
+        <div class="row g-2 mb-4">
+          <div class="col"><div class="card card-hover border-primary text-center p-3">Fortaleza</div></div>
+          <div class="col"><div class="card card-hover border-secondary text-center p-3">Disciplina</div></div>
+          <div class="col"><div class="card card-hover border-success text-center p-3">Solidaridad</div></div>
+          <div class="col"><div class="card card-hover border-warning text-center p-3">Valentía</div></div>
+          <div class="col"><div class="card card-hover border-danger text-center p-3">Perseverancia</div></div>
+        </div>
+        <p>En primaria enseñamos:</p>
+        <ul>
+          <li>Comunicación y comprensión lectora</li>
+          <li>Matemática lógica y resolución de problemas</li>
+          <li>Ciencia, tecnología y medio ambiente</li>
+          <li>Robótica y pensamiento computacional</li>
+          <li>Arte, música, educación física e inglés</li>
+        </ul>
+        <!-- Secuencia de imágenes con descripciones -->
+<div class="text-center mt-5">
+    <h3 style="font-family: 'Baloo 2', cursive; color: #002762; font-weight: bold;">Momentos que Inspiran</h3>
+    <p style="font-size: 18px; font-family: 'Balaoo 2', sans-serif; color: #333; line-height: 1.6;">
+        Aquí compartimos algunos de los momentos más importantes de nuestros estudiantes en el Nivel Primario, donde cada actividad refleja los valores que cultivamos día a día.
+    </p>
+    <div class="row g-4">
+        <!-- Imagen 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/primaria1.jpg" class="card-img-top" alt="Estudiantes resolviendo problemas matemáticos">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Desarrollando habilidades de resolución</h5>
+                    <p style="font-size: 16px;">En cada clase de Matemática, nuestros estudiantes aprenden a resolver problemas, pensando de manera lógica y creativa para encontrar soluciones.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/primaria2.jpg" class="card-img-top" alt="Estudiantes trabajando en grupo">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Trabajo colaborativo</h5>
+                    <p style="font-size: 16px;">El trabajo en equipo es fundamental. Aquí, los estudiantes aprenden a compartir ideas, apoyarse mutuamente y colaborar en proyectos para fortalecer su espíritu de <strong>solidaridad</strong> y <strong>disciplina</strong>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/primaria3.jpg" class="card-img-top" alt="Niños aprendiendo ciencias y tecnología">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Explorando Ciencia y Tecnología</h5>
+                    <p style="font-size: 16px;">A través de actividades interactivas en ciencia y tecnología, nuestros estudiantes desarrollan habilidades para comprender el mundo que los rodea y proponen soluciones innovadoras.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+      secundaria: `
+        <h2>Nivel Secundario (1° a 5° año)</h2>
+        <p>Secciones: Fortaleza, Disciplina, Solidaridad, Valentía, Perseverancia.</p>
+        <div class="row g-2 mb-4">
+          <div class="col"><div class="card card-hover border-primary text-center p-3">Fortaleza</div></div>
+          <div class="col"><div class="card card-hover border-secondary text-center p-3">Disciplina</div></div>
+          <div class="col"><div class="card card-hover border-success text-center p-3">Solidaridad</div></div>
+          <div class="col"><div class="card card-hover border-warning text-center p-3">Valentía</div></div>
+          <div class="col"><div class="card card-hover border-danger text-center p-3">Perseverancia</div></div>
+        </div>
+        <p>Currícula avanzada en:</p>
+        <ul>
+          <li>Razonamiento matemático y álgebra</li>
+          <li>Literatura, escritura y argumentación</li>
+          <li>Química, física y biología en laboratorio</li>
+          <li>Programación, emprendimiento y liderazgo</li>
+          <li>Preparación preuniversitaria desde 4° año</li>
+        </ul>
+        <!-- Secuencia de imágenes con descripciones -->
+<div class="text-center mt-5">
+    <h3 style="font-family: 'Baloo 2', cursive; color: #002762; font-weight: bold;">Aprendizaje y Crecimiento en el Nivel Secundario</h3>
+    <p style="font-size: 18px; font-family: 'Baloo 2', sans-serif; color: #333; line-height: 1.6;">
+        En el Nivel Secundario, preparamos a nuestros estudiantes para ser líderes y pensadores críticos. Aquí compartimos algunos momentos representativos de su aprendizaje.
+    </p>
+    <div class="row g-4">
+        <!-- Imagen 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/secundario1.jpg" class="card-img-top" alt="Estudiantes trabajando en álgebra y matemáticas">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Dominando el álgebra</h5>
+                    <p style="font-size: 16px;">Nuestros estudiantes de secundaria aprenden a resolver ecuaciones complejas y aplicar el razonamiento lógico en problemas matemáticos desafiantes.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/secundario2.jpg" class="card-img-top" alt="Estudiantes en laboratorio de ciencias">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Experimentando en el laboratorio</h5>
+                    <p style="font-size: 16px;">Los estudiantes realizan experimentos en física, química y biología, reforzando conceptos teóricos mediante prácticas que desarrollan su curiosidad científica.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/secundario3.jpg" class="card-img-top" alt="Estudiantes en taller de programación y emprendimiento">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Innovación y liderazgo</h5>
+                    <p style="font-size: 16px;">A través de talleres de programación y emprendimiento, nuestros estudiantes desarrollan habilidades clave para enfrentar los retos del futuro con valentía y creatividad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+      concurso: `
+        <h2>Concursos Académicos</h2>
+        <ul>
+          <li><strong>ONEM:</strong> Olimpiadas Nacionales de Educación Media – Destacamos en las fases regionales y nacionales, logrando medallas en diversas categorías.</li>
+    <li><strong>Canguro Matemático:</strong> Concurso nacional en el que nuestros estudiantes se han destacado con premios en múltiples categorías, demostrando su habilidad matemática.</li>
+    <li><strong>Matemática Binaria:</strong> Concurso que desafía a nuestros estudiantes con pruebas de lógica matemática, obteniendo siempre medallas en todas las ediciones.</li>
+    <li><strong>Concurso Nacional de Matemática y Comunicación:</strong> Un evento que pone a prueba nuestras habilidades en matemáticas y comunicación, con premiaciones sobresalientes.</li>
+
+        </ul>
+       <div class="text-center mt-5">
+    <h3 style="font-family: 'Baloo 2', cursive; color: #002762; font-weight: bold;">Logros Académicos Destacados</h3>
+    <p style="font-size: 18px; font-family: 'Baloo 2', sans-serif; color: #333; line-height: 1.6;">
+        A continuación, algunos momentos clave de nuestros logros en estos concursos.
+    </p>
+    <div class="row g-4">
+        <!-- Imagen 1: ONEM -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/logro3.jpg" class="card-img-top" alt="ONEM - Olimpiada Nacional Escolar de Matemáticas">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Olimpiadas Nacionales de Matemáticas (ONEM)</h5>
+                    <p style="font-size: 16px;">Nuestros estudiantes han brillado en las Olimpiadas Nacionales de Matemáticas, destacándose tanto en la fase regional como en la nacional, con medallas en todas las categorías.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 2: Canguro Matemático -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/logro1.jpg" class="card-img-top" alt="Canguro Matemático">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Concurso Nacional "Canguro Matemático"</h5>
+                    <p style="font-size: 16px;">En el Canguro Matemático, nuestros estudiantes se han destacado año tras año, ganando premios en diversas categorías y demostrando su destreza matemática.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Imagen 3: Matemática Binaria -->
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <img src="img/logro2.jpg" class="card-img-top" alt="Matemática Binaria">
+                <div class="card-body" style="background-color: rgba(0, 0, 0, 0.6); color: white; padding: 15px;">
+                    <h5 style="font-family: 'Baloo 2', cursive; color: #002762;">Concurso de Matemática Binaria</h5>
+                    <p style="font-size: 16px;">Nuestros estudiantes han sido constantes campeones en Matemática Binaria, obteniendo victorias en todas las ediciones con su excepcional razonamiento lógico y matemático.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> `,
+      talleres: `
+        <h2>Talleres Extra-curriculares</h2>
+        <ul>
+          <li><strong>Música:</strong> Coro, instrumentos de viento, cuerdas, ensambles.</li>
+          <li><strong>Teatro:</strong> Obras completas, producción, escenografía y expresión oral.</li>
+          <li><strong>Danza:</strong> Marinera, huayno, danza moderna, hip hop, danza libre.</li>
+          <li><strong>Deporte:</strong> Torneos de fútbol, vóley, atletismo y ajedrez escolar.</li>
+        </ul>
+        <p style="font-size: 18px; font-family: 'Arial', sans-serif; color: #333; text-align: center; line-height: 1.6;">
+    En nuestra institución, ofrecemos una amplia variedad de talleres diseñados para fomentar la creatividad, el trabajo en equipo y el desarrollo integral de nuestros estudiantes. ¡Aquí, cada alumno tiene la oportunidad de descubrir nuevas pasiones y desarrollar habilidades únicas!
+</p>
+
+<div class="row g-4 mb-4">
+    <!-- Imagen 1 - Música -->
+    <div class="col-md-4">
+        <div class="card card-hover">
+            <img src="img/taller_musica.jpg" class="d-block w-100" alt="Taller de Música">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Música</h5>
+                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Explora el arte de la música con Coro, Instrumentos de viento y cuerdas. ¡Una sinfonía de talentos que se une en cada ensayo y presentación!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Imagen 2 - Teatro -->
+    <div class="col-md-4">
+        <div class="card card-hover">
+            <img src="img/taller_teatro.jpg" class="d-block w-100" alt="Taller de Teatro">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Teatro</h5>
+                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">Desde la producción hasta la escenografía, el teatro cobra vida en nuestra escuela. ¡Cada obra refleja la pasión de nuestros jóvenes actores!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagen 3 - Danza -->
+    <div class="col-md-4">
+        <div class="card card-hover">
+            <img src="img/taller_danza.jpg" class="d-block w-100" alt="Taller de Danza">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7); padding: 20px;">
+                <h5 style="font-family: 'Baloo 2', cursive; color: #FF9800; font-weight: bold;">Danza</h5>
+                <p style="font-size: 16px; font-family: 'Arial', sans-serif; color: white;">La danza es expresión pura. Desde la Marinera hasta el Hip Hop, nuestros estudiantes se sumergen en un mundo de movimiento y arte.</p>
+            </div>
+        </div>
+    </div>
+</div>`
+    };
+
+    botones.forEach(b => {
+      b.addEventListener("click", () => {
+        contenido.innerHTML = info[b.dataset.target];
+        botones.forEach(x => x.classList.remove("active-btn"));
+        b.classList.add("active-btn");
+      });
+    });
+  </script>
+
+</body>
+</html>
